@@ -2,14 +2,15 @@
 console.log({"client": "client"});
 
 async function getTodo() {
-  const response = await fetch("https://pxng.online/todolist");
+  const response = await fetch("https://pxng.online/todo-list");
   if (!response.ok) {
     throw new Error("Failed to fetch data");
   }
   return response.json();
 }
 import { useEffect, useState } from 'react';
-
+import style from "/app/loading.module.css";
+import  "/app/loading.css";
 export default function Page() {
   const [loading, setLoading] = useState(true);
   const [todos, setTodos] = useState([]);
@@ -28,7 +29,13 @@ export default function Page() {
   return (
     <>
     { loading ?
-      <div>Loading...</div>
+    <>
+      <div className={style.box}>
+      </div>
+      <div className={style.green}>Loading...</div>
+    </>
+
+
       :
 
       todos.data.map((todo, index) => (

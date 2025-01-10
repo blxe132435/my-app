@@ -23,7 +23,9 @@ export default function RootLayout({ children }) {
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-        <Link href="/api"><button className="px-4 bg-blue-500 hover:bg-blue-400 ">api</button></Link>
+      <Link href="/"><button className="px-4 bg-blue-500 hover:bg-blue-400 ">home</button></Link>
+      <Link href="/api"><button className="px-4 bg-blue-500 hover:bg-blue-400 ">api</button></Link>
+      <Link href="/users/9"><button className="px-4 bg-blue-500 hover:bg-blue-400 ">users</button></Link>
       <Link href="/test/id/name"><button className="px-4 bg-blue-500 hover:bg-blue-400">test</button></Link>
       <Link href="/todo-list"><button className="px-4 bg-blue-500 hover:bg-blue-400">todo</button></Link>
       <Link href="/todo-list/client"><button className="px-4 bg-blue-500 hover:bg-blue-400">todo-client</button></Link>

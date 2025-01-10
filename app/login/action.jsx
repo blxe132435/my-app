@@ -18,7 +18,7 @@ export async function Login(prevState, formData) {
     console.log(Email, Password);
   const secretJWK = {
     kty: 'oct',
-    k: process.env.JOSE_SECRET
+    k: "123"
   }
   const secretKey = await importJWK(secretJWK, 'HS256')
   const token = await new SignJWT({ Email })

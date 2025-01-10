@@ -7,7 +7,7 @@ export async function middleware(request) {
   const token = request.cookies.get("token").value
   const secretJWK = {
     kty: "oct",
-    k: process.env.JOSE_SECRET
+    k: "123"
   }
   const secretKey = await importJWK(secretJWK, 'HS256')
   const { payload } = await jwtVerify(token, secretKey)
